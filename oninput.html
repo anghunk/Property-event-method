@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oninput</title>
+</head>
+<body>
+    <div>当表单获得用户输入时触发的脚本,当输入框输入或者删除时都会触发oninput</div>
+    <p>立即触发</p>
+    <input id="enter" type="text" oninput="myfun()">
+    <input id="demo" disabled>
+    <script>
+        function myfun() {
+            document.getElementById('demo').value = document.getElementById('enter').value
+        }
+    </script>
+    <p>当在第一个input框输入时，另一个框会同步显示</p>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form事件总结</title>
+</head>
+<body>
+    <div>获得焦点</div>
+    <input type="text" onfocus="getfocus()">
+    <div id="getfocus"></div>
+    <hr>
+    <div>失去焦点</div>
+    <input type="text" onblur="lose()">
+    <div id="lose"></div>
+    <hr>
+    <div>元素被改变时触发，（失去焦点后）</div> 
+    <input type="text" onchange="changelose()">
+    <div id="changelose"></div>
+    <hr>
+    <div>元素被改变时触发，（立刻触发）</div>
+    <input type="text" oninput="immediately()">
+    <div id="immediately"></div>
+    <hr>
+    <div>表单无效时触发，比如提交无效</div>
+    <form>
+        <input type="text" oninvalid="forminvalid()" required>
+        <input type="submit" value="submit">
+    </form>
+    <div id="forminvalid"></div>
+    <hr>
+    <div>重置按钮被点击时触发</div>
+    <form onreset="reset1()">
+        <input type="text">
+        <input type="reset" value="重置">
+    </form>
+    <div id="reset1"></div>
+    <hr>
+    <div>文本被选中时触发</div>
+    <input type="text" value="文本被选中时触发" onselect="select1()">
+    <div id="select1"></div>
+    <hr>
+    <div>表单被提交时触发</div>
+    <form onsubmit="sub1()">
+        <input type="text">
+        <input type="submit">
+    </form>
+    <div id="sub1"></div>
+
+
+
+
+    <script>
+        // 获得焦点
+        function getfocus() {
+            document.getElementById('getfocus').innerHTML = '成功获得焦点'
+        }
+
+        // 失去焦点
+        function lose() {
+            document.getElementById('lose').innerHTML = '成功失去焦点'
+        }
+
+        // 元素内容被改变
+        function changelose() {
+            document.getElementById('changelose').innerHTML = '元素被改变'
+        }
+
+        function immediately() {
+            document.getElementById('immediately').innerHTML = '元素被改变'
+        }
+
+        //表单无效时触发
+        function forminvalid() {
+            document.getElementById('forminvalid').innerHTML = '无效'
+        }
+
+        //点击重置按钮时触发
+        function reset1() {
+            console.log('重置')
+            document.getElementById('reset1').innerHTML = '重置成功'
+        }
+
+        //文本被选中时触发
+        function select1() {
+            document.getElementById('select1').innerHTML = '文本被选中'
+        }
+
+        //表单被提交时触发
+        function sub1() {
+            document.getElementById('sub1').innerHTML = '表单被提交'
+        }
+    </script>
+</body>
+</html>

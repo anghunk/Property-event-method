@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onmousedown="whichButton(event)">
+    <div>点击文字</div>
+    <div id="demo"></div>
+    <script type="text/javascript">
+        function whichButton(event) {
+            var btnNum = event.button;
+            if (btnNum == 2) {
+                document.getElementById('demo').innerHTML = '您点击了鼠标右键！'
+            }else if (btnNum == 0) {
+                document.getElementById('demo').innerHTML = '您点击了鼠标左键！'
+            }else if (btnNum == 1) {
+                document.getElementById('demo').innerHTML = '您点击了鼠标中键！'
+            }else {
+                document.getElementById('demo').innerHTML = '您点击了" + btnNum + "号键，我不能确定它的名称。'
+            }
+        }
+    </script>
+
+</html>

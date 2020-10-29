@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>键盘按键触发</p>
+    <input type="text" onkeydown="myfun()">
+    <input id="demo">
+    <script>
+        function myfun() {
+            var x;
+            if (window.event) {
+                x = event.keyCode;
+            }else if (event.which){ 
+                x = event.which;
+            }
+            var keychar = String.fromCharCode(x);
+            document.getElementById('demo').value = "按键 " + keychar + " 被按下";
+        }
+    </script>
+</body>
+</html>

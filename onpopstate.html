@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onpopstate</title>
+</head>
+<body>
+    <a href="https:baidu.com">baidu</a>
+    <script>
+        window.onpopstate = function() {
+        alert('因历史记录改变我被触发啦！')
+    }
+    </script>
+</body>
+</html>

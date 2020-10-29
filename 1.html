@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <input name="title" type="text" size="50" maxlength="30" onkeyup="javascript:setShowLength(this, 15, 'cost_tpl_title_length');">
+
+        <span class="red" id="cost_tpl_title_length">还可以输入30字数</span> 
+        <script>
+            function setShowLength(obj, maxlength, id) {
+            var rem = maxlength - obj.value.length;
+            var wid = id;
+            if (rem < 0){
+            rem = 0;
+            }
+            document.getElementById(wid).innerHTML = "还可以输入" + rem + "字数";
+           }
+        </script>
+    </body>
+</html>

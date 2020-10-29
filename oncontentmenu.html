@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            background:yellow;
+            color: #000;
+            text-align: center;
+            line-height: 300px;
+        }
+    </style>
+</head>
+<body 
+    oncontextmenu="you()" 
+    onclick="zuo()" 
+    ondblclick="shuang()"
+>
+    <span>可以绑定在任意元素中触发，可以一直触发，不用刷新</span>
+    <p>右键</p>
+    <div id="demo"></div>
+    <script>
+        function you() {
+            document.getElementById('demo').innerHTML = '右键点击事件触发！'
+        }
+        function zuo(){
+            document.getElementById('demo').innerHTML = '左键单击事件触发！'
+        }
+        function shuang(){
+            document.getElementById('demo').innerHTML = '鼠标双击事件触发！'
+        }
+    </script>
+</body>
+</html>

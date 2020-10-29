@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onreset="myfun()">
+        <input type="text" onfocus="mufun1()">
+        <input type="reset" value="reset">
+    </form>
+    <div id="demo"></div>
+    <script>
+        
+        function myfun(){
+            document.getElementById('demo').innerHTML = '重置成功，重新输入'
+        }
+        function mufun1() {
+            document.getElementById('demo').innerHTML = ''
+        }
+    </script>
+</body>
+</html>

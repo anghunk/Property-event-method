@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            overflow: scroll;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>onscroll</h2>
+    <div onscroll="scroll1()">In my younger and more vulnerable years my father gave me some advice that I've been
+        turning over in my mind ever since.</div>
+    <p>滑动了<span id="ci"></span>次</p>
+    <script>
+        x = 0
+        function scroll1() {
+            document.getElementById('ci').innerHTML = x += 1
+        }
+    </script>
+
+    <h2>onmousewheel</h2>
+    <div onmousewheel="wheel()">In my younger and more vulnerable years my father gave me some advice that I've been
+        turning over in my mind ever since.</div>
+    <p>滑动了<span id="ci2"></span>次</p>
+    <script>
+        x = 0
+        function wheel() {
+            document.getElementById('ci2').innerHTML = x += 1
+        }
+    </script>
+</body>
+
+</html>

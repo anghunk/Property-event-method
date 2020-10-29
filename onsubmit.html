@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="myfun()">
+        <!-- 注意：事件要绑定到form标签上面 -->
+        <input type="text" name="name">
+        <input type="submit" value="submit">
+        <div id="demo"></div>
+    </form>
+    <script>
+        function myfun() {
+           document.getElementById('demo').innerHTML = '提交成功'
+           console.log('提交成功')
+        }
+    </script>
+</body>
+</html>

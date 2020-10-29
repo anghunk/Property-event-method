@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>选中文本框中的内容</p>
+    <input onselect="myfun()" value="选中我" onblur="bbb()">
+    <div id="demo"></div>
+    <script>
+        function myfun() {
+            document.getElementById('demo').innerHTML = '已选中'
+        }
+        function bbb() {
+            document.getElementById('demo').innerHTML = ''
+        }
+    </script>
+</body>
+</html>
+

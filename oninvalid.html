@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>当元素无效时触发事件</div>
+    <div>给文本框一个不能为空的属性，这时候如果不写内容就提交就会触发`oninvalid`事件</div>
+    <form>
+        <input type="text" oninvalid="myfun()" required>
+        <input type="submit">
+    </form>
+    <div id="demo"></div>
+    <script>
+        function myfun() {
+            document.getElementById('demo').innerHTML = '"填写不能为空！"'
+        }
+       
+    </script>
+</body>
+</html>
